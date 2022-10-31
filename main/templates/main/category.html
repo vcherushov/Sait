@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<ul class="list-articles">
+	{% for p in post %}
+			<li><h2>{{p.title}}</h2>
+				<p>{{p.door}}</p>
+			<div class="clear"></div>
+			<p class="link-read-post"><a href="{{ p.get_absolute_url }}">Смотреть</a></p>
+			</li>
+	{% endfor %}
+</ul>
+{% endblock %}
+
